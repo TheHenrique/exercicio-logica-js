@@ -14,9 +14,14 @@ function encontrarIndices(numeros) {
     return { indiceMaior, indiceMenor };
 }
 
-const numeros = [15, 3, 42, 8, -7, 23];
-const resultado = encontrarIndices(numeros);
+// Só executa o exemplo quando o arquivo é rodado com "node desafio2-indices.js"
+if (require.main === module) {
+    const numeros = [15, 3, 42, 8, -7, 23];
+    const resultado = encontrarIndices(numeros);
 
-console.log('Array:', numeros);
-console.log('Índice do maior valor:', resultado.indiceMaior, '(valor ' + numeros[resultado.indiceMaior] + ')');
-console.log('Índice do menor valor:', resultado.indiceMenor, '(valor ' + numeros[resultado.indiceMenor] + ')');
+    console.log('Array:', numeros);
+    console.log('Índice do maior valor:', resultado.indiceMaior, '(valor ' + numeros[resultado.indiceMaior] + ')');
+    console.log('Índice do menor valor:', resultado.indiceMenor, '(valor ' + numeros[resultado.indiceMenor] + ')');
+}
+
+module.exports = encontrarIndices;
